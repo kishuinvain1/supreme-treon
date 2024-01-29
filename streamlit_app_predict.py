@@ -70,10 +70,10 @@ def predict(model, url):
 	
 def main():
     st.title('PCB Inspection')
-    rf = Roboflow(api_key="iYMRpnXtS12nRq1hLvH6")
-    project = rf.workspace().project("herminio-circulat-object")
-    model = project.version(1).model
-     
+    rf = Roboflow(api_key="ztkZZ5Bwjux1hvHq6IFW")
+    project = rf.workspace().project("flywheel")
+    model = project.version("2").model
+        
     image, svd_img = load_image()
 
     result = st.button('Detect')
