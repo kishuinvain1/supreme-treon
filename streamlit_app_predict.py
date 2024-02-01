@@ -69,9 +69,10 @@ def predict(model, url):
 	
 	
 def main():
-    st.title('PCB Inspection')
+    st.title('Part Inspection')
+    
     rf = Roboflow(api_key="ztkZZ5Bwjux1hvHq6IFW")
-    project = rf.workspace().project("flywheel")
+    project = rf.workspace("viswamanav-r-s-jwwu4").project("ok_golden_sample")
     model = project.version("2").model
         
     image, svd_img = load_image()
